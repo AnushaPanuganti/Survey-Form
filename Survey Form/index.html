@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Kindly provide your feedback to help us improve</p>
+    <div class="Form">
+      <form id="survey-form" action = "response.html">
+        <label for="name" id="name-label">Name</label><input name="name"id="name" type="text" required placeholder="Enter your name">
+        <label for="email" id="email-label">Email id</label><input name="email" id="email" type="email" required placeholder="Enter your mail id">
+        <label for="number" id="number-label">Age</label><input name="number" id="number" type="number" min="8" max="60" placeholder="Age">
+        <label for="dropdown" id="role">What is your role</label>
+        <select name="dropdown"id="dropdown">
+          <option value="">Select your role</option>
+          <option value="1">Student</option>
+          <option value="2">Software professional</option>
+          <option value="3">Prefer not to say</option>
+        </select>
+        <fieldset>
+          <legend>How was the experience with the course:</legend>
+          <label for="good"><input type="radio" name="experience" id="good" value="good" checked >Good</label>
+          <label for="Satisfactory"><input type="radio" name="experience" id="Satisfactory" value="Satisfactory">Satisfactory</label>
+          <label for="Advanced"><input type="radio" name="experience" id="Advanced" value="Advanced">Need advanced concepts</label>
+        </fieldset>
+        <fieldset>
+          <legend>Which concepts you want to learn further?(check all that apply)</legend>
+          <label for="Datascience"><input type="checkbox" value="Datascience" id="Datascience">Datascience</label>
+          <label for="AI/ML"><input type="checkbox" value="AI/ML" id="AI/ML">AI/ML</label>
+          <label for="Data Analytics"><input type="checkbox" value="Data Analytics" id="Data Analytics">Data Analytics</label>
+          <label for="Web dev"><input type="checkbox" value="Web dev" id="Web dev">Web dev</label>
+          <label for="DV"><input type="checkbox" value="DV" id="DV">Data Visualization</label>
+          <label for="Others"><input type="checkbox" value="Others" id="Others">Others</label>
+        </fieldset>
+        <label for="course">Mention the coding languages you want to learn:<textarea id="course" rows="7" cols="10" name="course"></textarea></label>
+        <input id="submit" type="submit" value="Submit" onclick="return checkCourse()" />
+      </form>
+    </div>
+    <script src="response.js"></script>
+  </body>
+</html>
